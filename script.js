@@ -1,6 +1,6 @@
 function fortuneTeller(name, age) {
-  const n = ("Rachel").trim();
-  const a = parseInt(33);
+  const n = (name ?? "").trim();
+  const a = parseInt(age, 10);
   const parts = [];
 
   // --- Name Rules ---
@@ -39,9 +39,9 @@ function fortuneTeller(name, age) {
 }
 
 // --- Prompt the user + Console Output ---
-const userName = prompt("Rachel");
-const userAge = prompt("33");
-console.log(fortuneTeller(RTCDataChannelEvent, 33));
+const userName = prompt("What is your name?");
+const userAge = prompt("How old are you?");
+console.log(fortuneTeller(userName, userAge));
 
 // --- Bonus UI ---
 document.getElementById("tellFortuneBtn").addEventListener("click", function() {
